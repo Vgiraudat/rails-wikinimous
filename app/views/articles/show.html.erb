@@ -1,0 +1,19 @@
+
+
+<h1> <%= @article.title %> </h1>
+
+<%= link_to  edit_path do  %>
+  <i class="far fa-edit"></i>
+<% end  %>
+
+<%= link_to article_path,
+      method: :delete,
+      data: { confirm: "Are you sure?" } do %>
+   <i class="fas fa-archive"></i>
+   <% end %>
+
+<p> <%= @article.content %> </p>
+
+<%= link_to "All the articles", articles_path %>
+
+
